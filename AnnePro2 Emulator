@@ -1,0 +1,44 @@
+#CommentFlag //
+#InstallKeybdHook
+
+// Author: CocoJambo
+// Description: Simulates my preferred keyboard layout, similiar to that of the Anne Pro 2
+// on any keyboard without programmable keys. i.e. my laptop ^^
+
+
+// =========================
+// AnnePro2 Layout Marcos
+// =========================
+
+
+#Persistent
+SetCapsLockState, AlwaysOff
+
+
+// Capslock + sdef (left, down, up, right)
+
+Capslock & s::Send {Blind}{Left DownTemp}
+Capslock & s up::Send {Blind}{Left Up}
+
+Capslock & d::Send {Blind}{Down DownTemp}
+Capslock & d up::Send {Blind}{Down Up}
+
+Capslock & e::Send {Blind}{Up DownTemp}
+Capslock & e up::Send {Blind}{Up Up}
+
+Capslock & f::Send {Blind}{Right DownTemp}
+Capslock & f up::Send {Blind}{Right Up}
+
+
+// Make Capslock & Backspace equivalent to delete
+Capslock & BS::SendInput {Del Down}
+Capslock & BS up::SendInput {Del Up}
+
+
+// Make Win Key + Capslock work like Capslock
+#Capslock::
+If GetKeyState("CapsLock", "T") = 1
+    SetCapsLockState, AlwaysOff
+Else 
+    SetCapsLockState, AlwaysOn
+Return
