@@ -1,21 +1,11 @@
 #CommentFlag //
 #InstallKeybdHook
 
-// Author: CocoJambo
-// Description: Simulates my preferred keyboard layout, similiar to that of the Anne Pro 2
-// on any keyboard without programmable keys. i.e. my laptop ^^
-
-
-// =========================
-// AnnePro2 Layout Marcos
-// =========================
-
-
 #Persistent
 SetCapsLockState, AlwaysOff
 
 
-// Capslock + sdef (left, down, up, right)
+// Capslock + sdfe (left, down, up, right)
 
 Capslock & s::Send {Blind}{Left DownTemp}
 Capslock & s up::Send {Blind}{Left Up}
@@ -30,13 +20,33 @@ Capslock & f::Send {Blind}{Right DownTemp}
 Capslock & f up::Send {Blind}{Right Up}
 
 
+// Capslock + uohy (pgdown, pgup, home, end)
+
+Capslock & h::SendInput {Blind}{Home Down}
+Capslock & h up::SendInput {Blind}{Home Up}
+
+Capslock & n::SendInput {Blind}{End Down}
+Capslock & n up::SendInput {Blind}{End Up}
+
+Capslock & u::SendInput {Blind}{PgUp Down}
+Capslock & u up::SendInput {Blind}{PgUp Up}
+
+Capslock & o::SendInput {Blind}{PgDn Down}
+Capslock & o up::SendInput {Blind}{PgDn Up}
+
 // Make Capslock & Backspace equivalent to delete
 Capslock & BS::SendInput {Del Down}
 Capslock & BS up::SendInput {Del Up}
 
+// Make CapsLock & , the Volume_Down
+CapsLock & ,::SendInput {Volume_Down}
+
+
+// Make CapsLock & . the Volume_Up
+CapsLock & .::SendInput {Volume_Up}
 
 // Make Win Key + Capslock work like Capslock
-#Capslock::
+#Capslock:
 If GetKeyState("CapsLock", "T") = 1
     SetCapsLockState, AlwaysOff
 Else 
