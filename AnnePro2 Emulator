@@ -19,31 +19,43 @@ Capslock & e up::Send {Blind}{Up Up}
 Capslock & f::Send {Blind}{Right DownTemp}
 Capslock & f up::Send {Blind}{Right Up}
 
+// Capslock + nm,.jkluio (0-9)
 
-// Capslock + uohy (pgdown, pgup, home, end)
+Capslock & n::Send {Blind}{0 Down}
+Capslock & n up::Send {Blind}{0 Up}
 
-Capslock & h::SendInput {Blind}{Home Down}
-Capslock & h up::SendInput {Blind}{Home Up}
+Capslock & m::Send {Blind}{1 DownTemp}
+Capslock & m up::Send {Blind}{1 Up}
 
-Capslock & n::SendInput {Blind}{End Down}
-Capslock & n up::SendInput {Blind}{End Up}
+Capslock & ,::Send {Blind}{2 DownTemp}
+Capslock & , up::Send {Blind}{2 Up}
 
-Capslock & u::SendInput {Blind}{PgUp Down}
-Capslock & u up::SendInput {Blind}{PgUp Up}
+Capslock & .::Send {Blind}{3 DownTemp}
+Capslock & . up::Send {Blind}{3 Up}
 
-Capslock & o::SendInput {Blind}{PgDn Down}
-Capslock & o up::SendInput {Blind}{PgDn Up}
+Capslock & j::Send {Blind}{4 DownTemp}
+Capslock & j up::Send {Blind}{4 Up}
+
+Capslock & k::Send {Blind}{5 DownTemp}
+Capslock & k up::Send {Blind}{5 Up}
+
+Capslock & l::Send {Blind}{6 DownTemp}
+Capslock & l up::Send {Blind}{6 Up}
+
+Capslock & u::Send {Blind}{7 DownTemp}
+Capslock & u up::Send {Blind}{7 Up}
+
+Capslock & i::Send {Blind}{8 DownTemp}
+Capslock & i up::Send {Blind}{8 Up}
+
+Capslock & o::Send {Blind}{9 DownTemp}
+Capslock & o up::Send {Blind}{9 Up}
+
 
 // Make Capslock & Backspace equivalent to delete
 Capslock & BS::SendInput {Del Down}
 Capslock & BS up::SendInput {Del Up}
 
-// Make CapsLock & , the Volume_Down
-CapsLock & ,::SendInput {Volume_Down}
-
-
-// Make CapsLock & . the Volume_Up
-CapsLock & .::SendInput {Volume_Up}
 
 // Make Win Key + Capslock work like Capslock
 #Capslock:
