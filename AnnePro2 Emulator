@@ -1,3 +1,6 @@
+// autohotkey simulation of an Anne Pro 2 keyboard that I love
+// originaly made by Jarvis Prestidge
+
 #CommentFlag //
 #InstallKeybdHook
 
@@ -58,7 +61,7 @@ Capslock & BS up::SendInput {Del Up}
 
 
 // Make Win Key + Capslock work like Capslock
-#Capslock:
+#Capslock::
 If GetKeyState("CapsLock", "T") = 1
     SetCapsLockState, AlwaysOff
 Else 
