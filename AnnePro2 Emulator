@@ -1,8 +1,5 @@
-// autohotkey simulation of an Anne Pro 2 keyboard that I love
-// originaly made by Jarvis Prestidge
 
 #CommentFlag //
-#InstallKeybdHook
 
 #Persistent
 SetCapsLockState, AlwaysOff
@@ -67,3 +64,5 @@ If GetKeyState("CapsLock", "T") = 1
 Else 
     SetCapsLockState, AlwaysOn
 Return
+
+^!r::Reload  ; Ctrl+Alt+R
