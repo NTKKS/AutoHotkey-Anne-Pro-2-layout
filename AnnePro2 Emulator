@@ -1,4 +1,3 @@
-
 #CommentFlag //
 
 #Persistent
@@ -51,6 +50,11 @@ Capslock & i up::Send {Blind}{8 Up}
 Capslock & o::Send {Blind}{9 DownTemp}
 Capslock & o up::Send {Blind}{9 Up}
 
+Capslock & h::Send {Blind}{Home DownTemp}
+Capslock & h up::Send {Blind}{Home Up}
+
+Capslock & §::Send {Blind}{End DownTemp}
+Capslock & § up::Send {Blind}{End Up}
 
 // Make Capslock & Backspace equivalent to delete
 Capslock & BS::SendInput {Del Down}
